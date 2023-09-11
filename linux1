@@ -1,0 +1,78 @@
+1)File Programs 
+
+i)file exist or not
+
+touch ELF.txt
+echo "Enter the Filename"
+read filename
+if [  !  -f  $filename ];
+then
+echo "Filename $filename does not exists"
+exit 1
+else
+echo "$filename" | tr '[:upper:]' '[:lower:]'
+fi
+
+ii)Uppercase to lowercase
+
+touch ELF.txt
+echo "Enter the Filename"
+read filename
+if [  !  -f  $filename ];
+then
+echo "Filename $filename does not exists"
+exit 1
+else
+echo "$filename" | tr '[:upper:]' '[:lower:]'
+fi
+
+iii)Count words,lines characters
+
+# Create a file named "new.txt" with some initial content
+touch new.txt
+echo "Type something .." >> new.txt
+
+# Prompt the user to enter a file name
+echo "Enter the file name"
+read file
+
+# Check if the specified file exists
+if [ ! -f "$file" ]; then
+    echo "File $file does not exist"
+    exit 1
+fi
+
+# Count characters, words, and lines in the file
+c=$(cat "$file" | wc -c)
+w=$(cat "$file" | wc -w)
+l=$(cat "$file" | wc -l)
+
+# Display the results
+echo "Number of characters in $file is $c"
+echo "Number of words in $file is $w"
+echo "Number of lines in $file is $l"
+  
+2) Showing Various System Information
+  
+echo "SYSTEM INFORMATION"
+echo “Hello ,$LOGNAME”
+echo “Current Date is = $(date)”
+echo “User is ‘who I am’”
+echo “Current Directory = $(pwd)”
+echo "Network Name and Node Name = $(uname -n)"
+echo "Kernal Name =$(uname -s)"
+echo "Kernal Version=$(uname -v)"
+echo "Kernal Release =$(uname -r)"
+echo "Kernal OS =$(uname -o)"
+echo “Proessor Type = $(uname -p)”
+echo “Kernel Machine Information = $(uname –m)”
+echo "All Information =$(uname -a)"
+
+3)Manipulate date/Time
+
+  
+current_date=$(date "+%Y-%m-%d")
+current_time=$(date "+%H:%M:%S")
+# Display the current date and time
+echo "Current Date: $current_date"
+echo "Current Time: $current_time"
