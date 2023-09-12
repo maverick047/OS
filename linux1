@@ -145,4 +145,20 @@ case $ch in
 4) echo "Division is: $((n1\n2))";;
 5) echo ""Invalid choice...
 esac
-ii)
+ii) Print Patterns
+
+echo "Enter the no of rows : "
+read r
+i=1
+t=1
+while [ $i -le $r ]
+do
+  j=1
+  while [ $j -le $i ]
+  do
+    echo -n "*"
+    j=$((j+1))
+  done
+  echo 
+  i=$((i+1))
+
