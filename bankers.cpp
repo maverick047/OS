@@ -137,6 +137,15 @@ int main() {
     }
     
     request_resources();
+    
+for (j = 0; j < nr; j++)
+        ava[j] = aval[j];
+    
+    safety_algorithm();
+    display_safe_sequence();
+    
+    return 0;
+}
 
 2)producer consumer
 
@@ -203,11 +212,4 @@ int main() {
 }
 
     
-    for (j = 0; j < nr; j++)
-        ava[j] = aval[j];
     
-    safety_algorithm();
-    display_safe_sequence();
-    
-    return 0;
-}
