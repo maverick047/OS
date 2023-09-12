@@ -161,4 +161,34 @@ do
   done
   echo 
   i=$((i+1))
+iii) Print sum of n numbers using for loop
+echo "Enter Size(N)"
+read N
 
+sum=0
+
+echo "Enter Numbers"
+for((i=1;i<=N;i++))
+do
+  read num           #get number
+  sum=$((sum + num)) #sum+=num
+done
+
+iv) Print sum of n numbers using while loop
+
+echo "Enter Size(N)"
+read N
+
+i=1
+sum=0
+
+echo "Enter Numbers"
+while [ $i -le $N ]
+do
+  read num           #get number
+  sum=$((sum + num)) #sum+=num
+  i=$((i + 1))
+done
+
+echo $sum
+echo $sum
