@@ -76,3 +76,73 @@ current_time=$(date "+%H:%M:%S")
 # Display the current date and time
 echo "Current Date: $current_date"
 echo "Current Time: $current_time"
+
+4)String and Numerical handling functions
+
+i)Compare Strings
+
+echo "Enter two string"
+read a
+read b
+if [ -z $a ]
+then 
+echo "First String is empty: Null String"
+fi
+if [ -z $b ]
+then 
+echo "Second String is empty: Null String"
+fi
+if [ $a = $b ]
+then 
+echo "Strings are equal: strings Matched"
+else
+echo "Strings are not equal: Strings not match"
+fi
+
+ii)Palindrome
+
+echo "Enter the number : "
+read n
+num=0
+a=$n
+while [ $n -gt 0 ]
+do
+num=`expr $num \* 10`
+k=`expr $n % 10`
+num=`expr $num + $k`
+n=`expr $n / 10` 
+done
+if [ $num -eq $a ]
+then
+echo "It's a palindrome"
+else
+echo "Not a Palindrome"
+fi
+
+iii)First and last character
+
+a="abcdef"
+first="${a:0:1}"
+last="${a:  -1}"
+echo "$first"
+echo "$last"
+
+3) Loop and Selection constructs
+
+i)Menu driven program to perform all arithmetic operation using case statement.
+
+echo " Enter the 1st number"
+read n1
+echo " Enter the 2nd number"
+read n2
+echo "Menu: 1:Add 2:Sub 3:Mul 4:Div 5:Mod"
+echo "Enter the choice"
+read ch
+case $ch in
+1) echo "Addition is: $((n1+n2))";;
+2) echo "Subtraction is: $((n1-n2))";;
+3) echo "Multiplication is: $((n1*n2))";;
+4) echo "Division is: $((n1\n2))";;
+5) echo ""Invalid choice...
+esac
+ii)
