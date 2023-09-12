@@ -137,6 +137,71 @@ int main() {
     }
     
     request_resources();
+
+2)producer consumer
+
+    #include <stdio.h>
+#include <conio.h>
+
+int main() {
+    int s, n, b = 0, p = 0, c = 0;
+    clrscr();
+    printf("\nProducer and Consumer Problem");
+    
+    do {
+        printf("\nMenu");
+        printf("\n1. Producer an item");
+        printf("\n2. Consumer an item");
+        printf("\n3. Add item to the buffer");
+        printf("\n4. Display status");
+        printf("\n5. Exit");
+        printf("\nEnter your choice: ");
+        scanf("%d", &s);
+
+        switch (s) {
+            case 1:
+                p = p + 1;
+                printf("\nItem to be produced");
+                break;
+
+            case 2:
+                if (b != 0) {
+                    c = c + 1;
+                    b = b - 1;
+                    printf("\nItem to be consumed");
+                } else {
+                    printf("\nThe buffer is empty. Please wait...");
+                }
+                break;
+
+            case 3:
+                if (b < n) {
+                    if (p != 0) {
+                        b = b + 1;
+                        printf("\nItem added to buffer");
+                    } else {
+                        printf("\nNo items to add...");
+                    }
+                } else {
+                    printf("\nBuffer is full. Please wait.");
+                }
+                break;
+
+            case 4:
+                printf("No. of items produced: %d", p);
+                printf("\nNo. of consumed items: %d", c);
+                printf("\nNo. of buffered items: %d", b);
+                break;
+
+            case 5:
+                exit(0);
+        }
+    } while (s <= 5);
+
+    getch();
+    return 0;
+}
+
     
     for (j = 0; j < nr; j++)
         ava[j] = aval[j];
