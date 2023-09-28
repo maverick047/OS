@@ -2,15 +2,14 @@
 
 i)file exist or not
 
-touch ELF.txt
-echo "Enter the Filename"
+touch fil.txt
+echo "enter the file name :"
 read filename
-if [  !  -f  $filename ];
+if [ -f $filename ]
 then
-echo "Filename $filename does not exists"
-exit 1
+echo "file exists"
 else
-echo "$filename" | tr '[:upper:]' '[:lower:]'
+echo "file doesn't exist"
 fi
 
 ii)Uppercase to lowercase
