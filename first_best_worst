@@ -1,4 +1,4 @@
-Worst Fit
+First Fit
 
 include<stdio.h>
 #include<conio.h>
@@ -48,7 +48,7 @@ printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d",i,f[i],ff[i],b[ff[i]],frag[i]);
 getch();
 }
 
-First Fit
+Worst Fit
 
 #include<stdio.h>
 #include<conio.h>
